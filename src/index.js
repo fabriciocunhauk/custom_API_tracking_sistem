@@ -15,7 +15,7 @@ app.use(authRoutes);
 app.use(tracksRoutes);
 
 const api_key = process.env.DB_PASS
-const mongoUri = `mongodb+srv://admin-fabricio:${api_key}@cluster0.i9ftq.mongodb.net/<dbname>?retryWrites=true&w=majority`
+const mongoUri = `mongodb+srv://${api_key}@cluster0.i9ftq.mongodb.net/<dbname>?retryWrites=true&w=majority`
 mongoose.connect(mongoUri, {
     useNewUrlParser: true,
     useCreateIndex: true,
